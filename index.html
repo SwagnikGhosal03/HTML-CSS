@@ -1,38 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agency</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Flexbox Pricing Table</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+    }
+    .pricing-container{
+      display:flex;
+      gap: 30px;
+     justify-content: center;
+     align-items: center;
+    }
+    .plan-button{
+      background-color: orange;
+      border: 2px solid rgb(241, 228, 228);;
+      color: aliceblue;
+      height: 35px;
+      border-radius: 17%;
+      margin-bottom: 20px;
+    }
+    .pricing-plan{
+      text-align: center;
+      background-color:rgb(241, 228, 228);
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 3%;
+    }
+    .plan-title{
+      font-weight: 505;
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .plan-price{
+      font-weight: 900;
+      font-size: 50px;
+    }
+    .plan-features{
+      margin-bottom: 20px;
+    }
+    li{
+      margin-bottom: 15px;
+      list-style: none;
+    }
+    @media (max-width: 1250px) {
+      .pricing-container{
+       flex-direction: column;
+        height: 100%;
+      }
+  
+    }
+  </style>
 </head>
 
 <body>
-  <div class="main">
-    <img class="logo" src="./assets/images/logo.png" alt="logo">
-    <h1>We are a <span id="a">Creative</span> Design Agency</h1>
-    <div class="left card"><img class="tile-image" src="./assets/images/beautiful.jpg" alt="hand and flower in water">
-    <h2 class="card-title">Beauty</h2>
-      <p class="card-text">We strive to create the most beautiful websites for all your needs. Working closely with you
-        to
-        design and
-        develop an amazing website for your business.</p>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$11.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
     </div>
-
-    <div class="right card"><img class="tile-image" src="./assets/images/construction.jpg" alt="metal structure">
-      <h2 class="card-title">Construction</h2>
-      <p class="card-text">Built by our team of professional developers, we ensure the most rigourous and modern websites. Built from
-        scratch using HTML and CSS. Only the best for you.</p>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
     </div>
-
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
   </div>
-  <footer>
-    <p>Create. Develop. Design.</p>
-  </footer>
+
 </body>
 
 </html>
